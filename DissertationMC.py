@@ -134,12 +134,19 @@ mp = ModelParameters(price_start=1,
                      heston_vol0=0.06125)
 
 
+
 def BrownianMotion(paths=paths):
+
+def ExampleBrownianMotion(paths=paths):
     brownian_motion_example = []
     for i in range(paths):
         brownian_motion_example.append(brownian_motion_levels(mp))
     plot_stochastic_process(brownian_motion_example,'Brownian Motion Example')
-
+def ExampleGeometricBrownianMotion(paths=paths):
+    geometric_brownian_motion_example = []
+    for i in range(paths):
+        geometric_brownian_motion_example.append(geometric_brownian_motion_levels(mp))
+    plot_stochastic_process(geometric_brownian_motion_example, 'Geometric Brownian Motion')
 
 
 
